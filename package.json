@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "client": "cd client && npm start",
+    "server": "cd backend && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@stripe/react-stripe-js": "^2.7.3",
+    "@stripe/stripe-js": "^4.1.0",
+    "axios": "^1.7.5",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "boxicons": "^2.1.4",
+    "cors": "^2.8.5",
+    "express-validator": "^7.2.0",
+    "jquery": "^3.7.1",
+    "moment-timezone": "^0.5.45",
+    "mongoose": "^8.6.0",
+    "multer": "^1.4.5-lts.1",
+    "popper.js": "^1.16.1",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18.3.1",
+    "react-phone-number-input": "^3.4.5",
+    "react-router-dom": "^6.26.0",
+    "react-toastify": "^10.0.5",
+    "redux-persist": "^6.0.0",
+    "swiper": "^11.1.11",
+    "winston": "^3.14.2"
+  }
+}

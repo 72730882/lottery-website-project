@@ -1,0 +1,217 @@
+.sidebar-active {
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 1050; /* Ensure it appears above other content */
+}
+
+.sidebar-active .sidebar {
+    transform: translateX(0);
+}
+
+
+.navbar-collapse.show .sidebar-overlay {
+    transform: translateX(0);
+}
+
+
+/* Stack Sign In and Sign Up buttons vertically */
+.d-flex.flex-column .btn {
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+/* Style for active navbar link */
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    background-color: none; /* Background color on click/hover */
+    color: #000; /* Text color on click/hover */
+    border-radius: 0.5rem; /* Optional: rounded corners */
+    padding: 0.5rem 1rem; /* Optional: padding for better click area */
+    
+}
+
+/* Ensure consistent spacing and alignment in sidebar */
+.sidebar .nav-link {
+    display: block;
+    padding: 10px 20px;
+    color: #000;
+
+}
+
+.sidebar .nav-link:hover {
+    background-color: none; /* Background color on hover */
+    color: #000; /* Text color on hover */
+   
+}
+/* Navbar.css */
+
+/* Styles for the sidebar overlay */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 1050; /* Ensure it appears above other content */
+  }
+  
+  .navbar-collapse.show .sidebar-overlay {
+    transform: translateX(0);
+  }
+
+  
+  .profile-card {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  /* Make it responsive */
+  @media (max-width: 767.98px) {
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+  
+    .navbar-nav .nav-item {
+      margin-bottom: px;
+      text-align: center;
+    }
+  
+    .d-flex {
+      flex-direction: column !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .navbar-nav {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 0;
+    }
+  
+    .d-flex {
+      flex-direction: row !important;
+    }
+  }
+  
+
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1000;
+    display: none;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 200px; /* Set a fixed width for better visibility on mobile */
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .dropdown-item .me-2 {
+    margin-right: 0.5rem;
+  }
+  /* General dark mode styles */
+body.dark-mode {
+  background-color: #2D3250 !important;
+  color:  #fff;
+}
+
+/* Navbar dark mode */
+body.dark-mode .navbar {
+  background-color: #2D3250;
+  color: #fff;
+}
+
+body.dark-mode .navbar-brand {
+  color: #fff;
+}
+
+body.dark-mode .navbar-nav .nav-link {
+  color: #fff;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: #bbb;
+}
+
+/* Dropdown dark mode */
+body.dark-mode .dropdown-menu {
+  background-color: #2D3250;
+  color: #fff;
+}
+
+body.dark-mode .dropdown-item {
+  color: #fff;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: #555;
+}
+
+/* Sidebar dark mode */
+body.dark-mode .sidebar {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Sidebar links dark mode */
+body.dark-mode .sidebar .nav-link {
+  color: #fff;
+}
+
+body.dark-mode .sidebar .nav-link.active {
+  background-color: none;
+  color: #bbb;
+}
+body.dark-mode .sidebar .nav-link:hover{
+  color: #bbb;
+}
+@media (max-width: 767.98px) {
+  .dropdown-menu {
+    right: auto;
+    left: 0; /* Adjust to ensure visibility on small screens */
+    width: 100%; /* Full width on mobile */
+  }
+}
+
+/* Ensure z-index is high enough */
+.navbar, .dropdown-menu {
+  z-index: 1050; /* Ensure it appears above other content */
+}

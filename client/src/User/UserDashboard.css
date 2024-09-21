@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+  --poppins: 'Poppins', sans-serif;
+  --lato: 'Lato', sans-serif;
+
+  --light: #F9F9F9;
+  --blue: #3C91E6;
+  --light-blue: #CFE8FF;
+  --grey: #eee;
+  --dark-grey: #AAAAAA;
+  --dark: #342E37;
+  --red: #DB504A;
+  --yellow: #FFCE26;
+  --light-yellow: #FFF2C6;
+  --orange: #FD7238;
+  --light-orange: #FFE0D3;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body.dark-mode {
+  --light: #0C0C1E;
+  --grey: #060714;
+  --dark: #FBFBFB;
+}
+
+body {
+  background: var(--grey);
+  overflow-x: hidden;
+}
+
+/* Default state when the sidebar is open */
+.dashboard-content {
+  transition: margin-left 0.3s ease;
+}
+
+.content-expanded {
+  margin-left: 270px; 
+}
+
+/* Adjust margin-left when the sidebar is collapsed */
+.content-collapsed {
+  margin-left: 60px; /* Adjust according to the compressed width of your sidebar */
+}
+
+
+
+
+#sidebar.hide ~ .dashboard-content {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+/* NAVBAR */
+.dashboard-nav {
+  height: 56px;
+  background: var(--light);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  font-family: var(--lato);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  justify-content: space-between; /* Adjust layout to distribute items */
+}
+
+.dashboard-nav .menu-toggle {
+  margin-right: auto; /* Align menu toggle to the start */
+}
+
+.notification-icon {
+  font-size: 20px;
+  position: relative;
+  margin: auto 10px auto 15px; /* Space from the search bar */
+}
+
+.notification-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--light);
+  background: var(--red);
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Styles for dark mode toggle */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.icon-sun,
+.icon-moon {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+
+.dark-mode .icon-moon {
+  fill: #f1c40f; /* Color for Moon in dark mode */
+}
+
+.dark-mode .icon-sun {
+  fill: #e67e22; /* Sun color in dark mode (hidden by default) */
+}
+
+.dashboard-container.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dashboard-nav {
+  background-color: var(--light);
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .dashboard-nav {
+  background-color: #1f1f1f;
+}
+
+.dark-mode-switch::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--dark-grey);
+  transition: 0.3s ease;
+  position: absolute;
+  left: 2px;
+}
+
+#dark-mode-switch:checked + .dark-mode-switch::before {
+  transform: translateX(16px);
+  background: var(--yellow);
+}
+
+/* Moon and Sun Icons */
+.icon-sun, .icon-moon {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-right: 24px; /* Space between icons */
+  fill: var(--dark-grey);
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.icon-sun:hover, .icon-moon:hover {
+  transform: scale(1.1);
+  fill: var(--blue); /* Change color on hover */
+}
+
+body.dark-mode .icon-sun {
+  fill: var(--yellow); /* Sun color in dark mode */
+}
+
+body.dark-mode .icon-moon {
+  fill: var(--light); /* Moon color in light mode */
+}
+
+/* MAIN CONTENT */
+.dashboard-main {
+  padding: 24px;
+  font-family: var(--poppins);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 24px;
+  margin-bottom: 0;
+  color: var(--dark);
+}
+
+/* TABLE AND NOTIFICATION SECTIONS */
+.table-section {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.notification-section,
+.transaction-history {
+  width: 45% !important;
+  max-width: none;
+  background: var(--light);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.notification-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--grey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--dark);
+}
+
+.notification-item p {
+  margin: 0;
+}
+
+.notification-date {
+  font-size: 12px;
+  color: var(--dark-grey);
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--grey);
+  color: var(--dark);
+  font-size: 14px;
+}
+
+.transaction-table th {
+  background: var(--grey);
+  font-weight: bold;
+}
+
+.transaction-table tr:last-child td {
+  border-bottom: none;
+}
+
+.transaction-table img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.transaction-table p {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body.dark-mode {
+  background-color: #1F2544 !important;
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+body.dark-mode .notification-section,
+body.dark-mode .transaction-history {
+  background-color: rgb(19, 51, 81);
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+body.dark-mode .transaction-table th {
+  background-color: #1F2544;
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+/* Make the notification and transaction sections responsive */
+@media (max-width: 768px) {
+  .table-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .notification-section,
+  .transaction-history {
+    width: 100% !important;
+  }
+
+}
+
+/* Adjust the layout for smaller screens (max 480px) */
+@media (max-width: 480px) {
+
+  .notification-section h3,
+  .transaction-history h3 {
+    font-size: 18px;
+  }
+
+  .notification-item,
+  .transaction-table th, 
+  .transaction-table td {
+    font-size: 14px;
+  }
+
+  .header-title {
+    font-size: 20px;
+  }
+}
+

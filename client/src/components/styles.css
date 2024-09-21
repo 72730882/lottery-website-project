@@ -1,0 +1,610 @@
+.swiper {
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  position: relative; 
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px; 
+  max-width: 300px; 
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+.testimonial-text {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.how-it-work{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px; /* Adjust this as necessary */
+  }
+.how-it-works {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px; /* Adjust this as necessary */
+}
+
+.feturedPrize {
+  margin: 0;
+  padding: 0;
+  margin-top: 50px; /* Adjust this as necessary */
+}
+
+
+/* Define color variables for light and dark modes */
+:root {
+  --background-light: white;
+  --background-dark: #121212;
+  --text-light: black;
+  --text-dark: white;
+  --button-light-bg: #e0e0e0;
+  --button-dark-bg: #333;
+  --button-light-text: #333;
+  --button-dark-text: #e0e0e0;
+  --link-light: #007bff;
+  --link-dark: #66aaff;
+}
+
+/* Light mode styles (default) */
+body {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+.navbar {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+.navbar .btn {
+  background-color: var(--button-light-bg);
+  color: var(--button-light-text);
+}
+
+.navbar .nav-link {
+  color: var(--link-light);
+}
+
+.navbar .nav-link:hover {
+  color: darken(var(--link-light), 10%);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color:#1F2544;
+  color:  var(--light);
+}
+
+
+
+body.dark-mode .navbar .btn {
+  background-color: var(--button-dark-bg);
+  color: var(--button-dark-text);
+}
+
+body.dark-mode .navbar .nav-link {
+  color: var(--link-dark);
+}
+
+body.dark-mode .navbar .nav-link:hover {
+  color: lighten(var(--link-dark), 10%);
+}
+/* Navbar dark mode */
+body.dark-mode .navbar {
+  background-color: #2D3250;
+  color: #fff;
+}
+
+body.dark-mode .navbar-brand {
+  color: #fff;
+}
+
+body.dark-mode .navbar-nav .nav-link {
+  color: #fff;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: #bbb;
+}
+
+/* Dropdown dark mode */
+body.dark-mode .dropdown-menu {
+  background-color: #2D3250;
+  color: #fff;
+}
+
+body.dark-mode .dropdown-item {
+  color: #fff;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: #555;
+}
+/* Light mode styles */
+.swiper-slide {
+  background-color: white; /* Light background for the slides */
+  color: black; /* Light text color */
+}
+
+.swiper-slide p {
+  color: black; /* Light text color for the testimonial text */
+}
+
+.swiper-slide h6 {
+  color: black; /* Light text color for the names */
+}
+
+/* Dark mode styles */
+body.dark-mode .swiper-slide {
+  background-color: #333; /* Dark background for the slides */
+  color: rgb(0, 0, 0); /* Light text color */
+}
+
+body.dark-mode .swiper-slide p {
+  color: #000000; /* Light text color for the testimonial text */
+}
+
+body.dark-mode .swiper-slide h6 {
+  color: #000000; /* Light text color for the names */
+}
+
+/* Swiper Pagination */
+body.dark-mode .swiper-pagination-bullet {
+  background: #b5a9a9; /* Light color for pagination bullets */
+}
+
+body.dark-mode .swiper-pagination-bullet-active {
+  background: #fff; /* Highlighted color for the active pagination bullet */
+}
+
+
+
+.custom-height .card {
+  height: 400px; /* Set the height to your desired value */
+}
+
+.custom-height .card-img-top {
+  height: 200px; /* Adjust the image height if necessary */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+.custom-modal-width {
+  max-width: 10cm; /* Adjust the width as needed */
+}
+.custom-btn {
+  /* Add your base styles for the custom buttons */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-btn-next {
+  background-color: rgb(19, 51, 81);
+  color: white;
+}
+
+.custom-btn-next:hover {
+  background-color: black;
+}
+
+.custom-btn-cancel {
+  background-color: #ccc;
+  color: #333;
+}
+
+.custom-btn-cancel:hover {
+  background-color: #b3b3b3;
+}
+.custom-btn:disabled {
+  background-color: #AAAAAA;
+  color:white;  
+  cursor: not-allowed;  
+}
+
+
+.custom-btn:disabled:hover {
+  background-color: #AAAAAA;  
+}
+
+
+
+.main-footer {
+  background-color: rgb(19, 51, 81);
+  color: white;
+  padding: 30px 0;
+}
+
+.main-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer a:hover {
+  text-decoration: underline;
+}
+
+.main-footer .container {
+  max-width: 1200px;
+}
+
+.main-footer .row {
+  margin-bottom: 20px;
+}
+
+.main-footer h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.main-footer p {
+  font-size: 0.875rem;
+}
+
+.main-footer .text-center {
+  margin-top: 20px;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem; /* Adjust spacing between icons */
+}
+
+.social-links i {
+  font-size: 1.2rem;
+}
+
+.social-links a:last-child {
+  margin-bottom: 0; 
+}
+
+.text-decoration-none { 
+  color: blue;
+}
+
+.text-decoration-none:hover {
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar {
+  background-color: rgb(19, 51, 81);
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Styling main banner */
+.main-banner {
+  background-color: rgb(19, 51, 81);  
+  color: white; 
+  padding: 50px 0; 
+  text-align: center; 
+}
+
+.banner-text {
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.banner-text h2 {
+  font-size: 2rem; 
+  margin-top: 0; 
+  margin-bottom: 20px; 
+}
+
+.banner-text p {
+  font-size: 1.125rem; 
+  margin-bottom: 30px; 
+}
+
+.btn-primary {
+  background-color: #007bff; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 1rem; 
+  border-radius: 20px; 
+  text-transform: uppercase; 
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; 
+  text-decoration: none; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .feturedPrize {
+      width: 70%;
+      
+  }
+  .featuredPrize{
+    padding-left: 30px;
+    margin-left: 100px;
+  }
+
+  .main-footer .container {
+      padding: 1rem;
+  }
+
+  .main-footer .text {
+      font-size: 0.875rem;
+  }
+
+  .main-footer .social-links {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .main-footer .social-links a {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+  }
+
+
+  .main-footer .row {
+      text-align: center;
+  }
+
+  .main-footer .col-md-6,
+  .main-footer .col-md-12 {
+      margin-bottom: 20px;
+  }
+
+  
+    .main-banner {
+      padding: 30px 0; 
+    }
+  
+    .banner-text h2 {
+      font-size: 1.5rem; 
+    }
+  
+    .banner-text p {
+      font-size: 1rem; 
+    }
+  }
+@media (max-width: 576px) {
+  .main-footer{
+    padding: 15px 0;
+  }
+  .swiper-slide img {
+    width: 60px;
+    height: 60px;
+
+
+
+  .swiper-slide {
+      padding: 15px;
+  }
+
+  .swiper-slide img {
+      width: 80px;
+      height: 80px;
+  }
+
+  .swiper-slide h6 {
+      font-size: 1rem;
+
+  }
+
+  .main-banner {
+      padding: 30px 0; 
+  }
+
+  .banner-text h2 {
+      font-size: 1.5rem; 
+  }
+
+  .banner-text p {
+      font-size: 1rem; 
+  }
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .profile{
+      display: flex;
+      
+    }
+}
+  
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 50px;
+}
+.swiper-slide img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+}
+
+@media (max-width: 576px) {
+  .main-footer {
+      padding: 15px 0;
+  }
+
+  .swiper-slide img {
+      width: 60px;
+      height: 60px;
+  }
+
+  .swiper-slide h6 {
+      font-size: 0.9rem;
+  }
+
+  .main-banner {
+      padding: 20px 0; 
+  }
+
+  .banner-text h2 {
+      font-size: 1.25rem; 
+  }
+
+  .banner-text p {
+      font-size: 0.875rem; 
+  }
+
+  .social-links a {
+      font-size: 1.1rem;
+  }
+}
+}
+.footer {
+  width: 100%;
+  background-color: rgb(19, 51, 81);
+  color: white;
+  padding: 30px 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-sm1, .btn-sm2 {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 80px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-sm1 {
+  background-color:  rgb(19, 51, 81); /* Primary color */
+  color: white;
+  border: 1px solid transparent;
+}
+
+.btn-sm1:hover {
+  background-color: black; /* Darker shade for hover */
+}
+
+.btn-sm2 {
+  background-color: #6c757d; /* Secondary color */
+  color: white;
+  border: 1px solid transparent;
+}
+
+.btn-sm2:hover {
+  background-color:red; /* Darker shade for hover */
+}
+/* Add this to your styles.css */
+body.dark-mode .main-banner {
+  background-color:  #1F2544;  /* Dark background color for dark mode */
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+/* Ensure the banner text colors are updated */
+body.dark-mode .banner-text {
+  color: #e0e0e0; /* Light text color for banner text */
+}
+body.dark-mode .how-it-work {
+  background-color: #2D3250;  /*Dark background color*/
+  color: #e0e0e0;          /* Light text color*/
+}
+body.dark-mode .featuredPrize {
+  background-color: #2D3250;  /*Dark background color*/
+  color: #e0e0e0;          /* Light text color*/
+}
+body.dark-mode .featuredPrize .btn-sm {
+  background-color: #e0e0e0;  /*Dark background color*/
+  color: black;          /* Light text color*/
+}
+body.dark-mode .featuredPrize .btn-sm:hover {
+  background-color: #bbb;  /*Dark background color*/
+  color: black;          /* Light text color*/
+}
+body.dark-mode .swiper  {
+  background-color: #2D3250 !important;  /*Dark background color*/
+  color: #e0e0e0;          /* Light text color*/
+}
+
+body.dark-mode .test  {
+  background-color: #2D3250;  /*Dark background color*/
+  color: #e0e0e0;   
+}
+body.dark-mode .currprize {
+  background-color:  #1F2544;  /* Dark background color for dark mode */
+  color: #e0e0e0; /* Light text color for dark mode */
+}
